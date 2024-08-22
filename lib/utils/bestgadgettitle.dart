@@ -24,8 +24,8 @@ class _BestGadgetTitleState extends State<BestGadgetTitle> {
           ),
           Container(
             margin: const EdgeInsets.only(right: 21, top: 10),
-            height: 15,
-            width: 15,
+            height: 20,
+            width: 20,
             child: Image.asset('assets/images/right-chevron.png'),
           )
         ],

@@ -20,8 +20,8 @@ class _BestGadgetContainerState extends State<BestGadgetContainer> {
         decoration: const BoxDecoration(
             gradient: LinearGradient(
           colors: [
-            Color.fromARGB(255, 112, 255, 250),
-            Color.fromARGB(255, 186, 246, 243)
+            Color.fromARGB(255, 252, 231, 255),
+            Color.fromARGB(255, 187, 142, 194)
           ],
         )),
         width: MediaQuery.of(context).size.width,

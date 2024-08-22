@@ -23,10 +23,13 @@ class _Bestgadget1State extends State<Bestgadget3> {
             SizedBox(
               height: 150,
               width: 100,
-              child: Image.asset('assets/images/trimmer.png'),
+              child: Image.asset('assets/images/mobile.png'),
             ),
-            const Text("Trimmers"),
-            const Text("Min 50% off"),
+            const Text("Mobiles"),
+            const Text(
+              "Min 50% off",
+              style: TextStyle(color: Colors.green),
+            ),
           ],
         ));
   }

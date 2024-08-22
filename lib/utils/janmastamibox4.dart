@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Bestgadget2 extends StatefulWidget {
-  const Bestgadget2({super.key});
+class Janmastamibox4 extends StatefulWidget {
+  const Janmastamibox4({super.key});
 
   @override
-  State<Bestgadget2> createState() => _Bestgadget1State();
+  State<Janmastamibox4> createState() => _Bestgadget1State();
 }
 
-class _Bestgadget1State extends State<Bestgadget2> {
+class _Bestgadget1State extends State<Janmastamibox4> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,10 +23,13 @@ class _Bestgadget1State extends State<Bestgadget2> {
             SizedBox(
               height: 150,
               width: 100,
-              child: Image.asset('assets/images/induction2.png'),
+              child: Image.asset('assets/images/cups.png'),
             ),
-            const Text("Induction Cooktop"),
-            const Text("Min 50% off", style: TextStyle(color: Colors.green)),
+            const Text("Cups And Soucers"),
+            const Text(
+              "Min 50% off",
+              style: TextStyle(color: Colors.green),
+            ),
           ],
         ));
   }

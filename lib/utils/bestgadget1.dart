@@ -26,7 +26,10 @@ class _Bestgadget1State extends State<Bestgadget1> {
               child: Image.asset('assets/images/trimmer.png'),
             ),
             const Text("Trimmers"),
-            const Text("Min 50% off"),
+            const Text(
+              "Min 50% off",
+              style: TextStyle(color: Colors.green),
+            ),
           ],
         ));
   }
