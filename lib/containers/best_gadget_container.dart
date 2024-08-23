@@ -17,13 +17,14 @@ class _BestGadgetContainerState extends State<BestGadgetContainer> {
   Widget build(BuildContext context) {
     return Container(
         margin: const EdgeInsets.only(top: 10, bottom: 10),
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 252, 231, 255),
-            Color.fromARGB(255, 187, 142, 194)
-          ],
-        )),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            gradient: const LinearGradient(
+              colors: [
+                Color.fromARGB(255, 252, 231, 255),
+                Color.fromARGB(255, 187, 142, 194)
+              ],
+            )),
         width: MediaQuery.of(context).size.width,
         height: 480,
         child: const Column(

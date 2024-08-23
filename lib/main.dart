@@ -1,5 +1,7 @@
 import 'package:demo_app/containers/best_gadget_container.dart';
 import 'package:demo_app/containers/janmastami.dart';
+import 'package:demo_app/containers/orderabove.dart';
+import 'package:demo_app/containers/shopbysports.dart';
 import 'package:demo_app/pages/hamburgerpage.dart';
 import 'package:demo_app/pages/login.dart';
 import 'package:demo_app/pages/splashscreen.dart';
@@ -267,6 +269,12 @@ class _DashBoardScreen extends State<MyCustomForm> {
               ),
               const Row(
                 children: [Janmastami()],
+              ),
+              const Row(
+                children: [OrderAboveContainer()],
+              ),
+              const Row(
+                children: [ShopBySportsContainer()],
               )
             ],
           ),

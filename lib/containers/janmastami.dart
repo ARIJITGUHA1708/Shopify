@@ -13,11 +13,12 @@ class Janmastami extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.width * 1.2,
-      decoration: const BoxDecoration(
-          gradient: LinearGradient(colors: [
-        Color.fromARGB(255, 241, 247, 242),
-        Color.fromARGB(255, 177, 247, 180)
-      ])),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          gradient: const LinearGradient(colors: [
+            Color.fromARGB(255, 241, 247, 242),
+            Color.fromARGB(255, 177, 247, 180)
+          ])),
       child: const Column(
         children: [
           Row(

@@ -74,11 +74,12 @@ class _ImageCardState extends State<ImageCard> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 85,
-                  width: 90,
+                Container(
+                  padding: const EdgeInsets.only(top: 5),
+                  height: 80,
+                  width: 100,
                   child: Image.asset(
-                    'assets/images/makeup.png',
+                    'assets/images/makeup2.png',
                   ),
                 ),
                 const Text("Makeup Brushes"),

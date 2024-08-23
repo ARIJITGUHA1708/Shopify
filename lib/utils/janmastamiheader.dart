@@ -13,10 +13,10 @@ class Janmastamiheader extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                margin: const EdgeInsets.only(left: 15, top: 5),
+                margin: const EdgeInsets.only(left: 21, top: 5),
                 child: const Text(
                   "Top Picks For Janmastami",
-                  style: TextStyle(fontWeight: FontWeight.w600),
+                  style: TextStyle(fontWeight: FontWeight.w800),
                 ),
               ),
               Container(
