@@ -50,7 +50,7 @@ class _DashBoardScreen extends State<MyCustomForm> {
             child: AppBar(
                 //toolbarHeight: 40,
                 title: const Text(
-                  "Flipkart",
+                  "Shopify",
                   style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                 ),
                 actions: [

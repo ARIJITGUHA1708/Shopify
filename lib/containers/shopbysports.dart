@@ -1,3 +1,4 @@
+import 'package:demo_app/pages/runningpage.dart';
 import 'package:demo_app/utils/shopbysport/shopbysportcard1.dart';
 import 'package:demo_app/utils/shopbysport/shopbysportcard2.dart';
 import 'package:demo_app/utils/shopbysport/shopbysportcard3.dart';
@@ -26,20 +27,60 @@ class ShopBySportsContainer extends StatelessWidget {
             ])),
         height: 300,
         width: MediaQuery.of(context).size.width,
-        child: const Column(
+        child: Column(
           children: [
-            Row(
+            const Row(
               children: [ShopBySportTitle()],
             ),
             SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    ShopBySportCard1(),
-                    ShopBySportCard2(),
-                    ShopBySportCard3(),
-                    ShopBySportCard4(),
-                    ShopBySportCard5()
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const RunningPage()));
+                      },
+                      child: const ShopBySportCard1(),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const RunningPage()));
+                      },
+                      child: const ShopBySportCard2(),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const RunningPage()));
+                      },
+                      child: const ShopBySportCard3(),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const RunningPage()));
+                      },
+                      child: const ShopBySportCard4(),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const RunningPage()));
+                      },
+                      child: const ShopBySportCard5(),
+                    ),
                   ],
                 )),
           ],

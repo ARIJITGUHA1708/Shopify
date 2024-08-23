@@ -6,8 +6,9 @@ class Hamburgerpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      shape: Border.all(style: BorderStyle.none),
+      //shape: Border.all(style: BorderStyle.none),
       backgroundColor: const Color.fromARGB(255, 215, 219, 234),
+      width: MediaQuery.of(context).size.width * 0.8,
       //surfaceTintColor: const Color.fromARGB(255, 0, 62, 249),
       child: ListView(
         padding: const EdgeInsets.only(top: 0),
@@ -21,7 +22,7 @@ class Hamburgerpage extends StatelessWidget {
                   Color.fromARGB(255, 209, 229, 245)
                 ])),
                 child: Text(
-                  "Flipkart",
+                  "Shopify",
                   style: TextStyle(
                       fontWeight: FontWeight.w800, color: Colors.white),
                 )),
@@ -30,13 +31,18 @@ class Hamburgerpage extends StatelessWidget {
             leading: Icon(Icons.person),
             title: Text("My Profile"),
           ),
+          Divider(
+            height: 1,
+            thickness: 2,
+            color: Colors.black12,
+          ),
           ListTile(
             leading: Icon(Icons.person),
             title: Text("SuperCoin Zone"),
           ),
           ListTile(
             leading: Icon(Icons.person),
-            title: Text("Flipkart Plus Zone"),
+            title: Text("Shopify Plus Zone"),
           ),
           ListTile(
             leading: Icon(Icons.person),
@@ -44,7 +50,7 @@ class Hamburgerpage extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.person),
-            title: Text("More on Flipkart"),
+            title: Text("More on Shopify"),
           ),
           ListTile(
             leading: Icon(Icons.language),
@@ -54,9 +60,14 @@ class Hamburgerpage extends StatelessWidget {
             leading: Icon(Icons.person),
             title: Text("Offer Zone"),
           ),
+          Divider(
+            height: 1,
+            thickness: 2,
+            color: Colors.black12,
+          ),
           ListTile(
             leading: Icon(Icons.sell),
-            title: Text("Sell on Flipkart"),
+            title: Text("Sell on Shopify"),
           ),
           ListTile(
             leading: Icon(Icons.person),
@@ -75,12 +86,13 @@ class Hamburgerpage extends StatelessWidget {
             title: Text("My Wishlist"),
           ),
           ListTile(
-            leading: Icon(Icons.account_box),
-            title: Text("My Account"),
-          ),
-          ListTile(
             leading: Icon(Icons.notification_add),
             title: Text("My Notification"),
+          ),
+          Divider(
+            height: 1,
+            thickness: 2,
+            color: Colors.black12,
           ),
           ListTile(
             leading: Icon(Icons.help_center),
