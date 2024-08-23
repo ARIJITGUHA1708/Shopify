@@ -13,6 +13,7 @@ class OrderAboveContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 290,
+      padding: const EdgeInsets.only(left: 20),
       width: MediaQuery.of(context).size.width,
       margin: const EdgeInsets.only(bottom: 10, top: 10),
       decoration: const BoxDecoration(

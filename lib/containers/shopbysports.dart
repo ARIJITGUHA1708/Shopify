@@ -13,11 +13,12 @@ class ShopBySportsContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         margin: const EdgeInsets.only(bottom: 20),
+        padding: const EdgeInsets.only(right: 20),
         decoration: const BoxDecoration(
             //borderRadius: BorderRadius.circular(20),
             borderRadius: BorderRadius.only(
-                topRight: Radius.circular(80),
-                bottomRight: Radius.circular(80)),
+                topRight: Radius.circular(90),
+                bottomRight: Radius.circular(90)),
             gradient: LinearGradient(colors: [
               Color.fromARGB(255, 240, 235, 230),
               Color.fromARGB(255, 240, 183, 107),
