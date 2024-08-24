@@ -1,4 +1,8 @@
+import 'package:demo_app/pages/basketballpage.dart';
+import 'package:demo_app/pages/footballpage.dart';
 import 'package:demo_app/pages/runningpage.dart';
+import 'package:demo_app/pages/tennispage.dart';
+import 'package:demo_app/pages/yogapage.dart';
 import 'package:demo_app/utils/shopbysport/shopbysportcard1.dart';
 import 'package:demo_app/utils/shopbysport/shopbysportcard2.dart';
 import 'package:demo_app/utils/shopbysport/shopbysportcard3.dart';
@@ -50,7 +54,7 @@ class ShopBySportsContainer extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const RunningPage()));
+                                builder: (context) => const FootballPage()));
                       },
                       child: const ShopBySportCard2(),
                     ),
@@ -59,7 +63,7 @@ class ShopBySportsContainer extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const RunningPage()));
+                                builder: (context) => const BasketballPage()));
                       },
                       child: const ShopBySportCard3(),
                     ),
@@ -68,7 +72,7 @@ class ShopBySportsContainer extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const RunningPage()));
+                                builder: (context) => const TennisPage()));
                       },
                       child: const ShopBySportCard4(),
                     ),
@@ -77,7 +81,7 @@ class ShopBySportsContainer extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const RunningPage()));
+                                builder: (context) => const YogaPage()));
                       },
                       child: const ShopBySportCard5(),
                     ),

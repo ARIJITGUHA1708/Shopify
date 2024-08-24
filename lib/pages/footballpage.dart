@@ -1,8 +1,8 @@
 import 'package:demo_app/utils/running/runningcard.dart';
 import 'package:flutter/material.dart';
 
-class RunningPage extends StatelessWidget {
-  const RunningPage({super.key});
+class FootballPage extends StatelessWidget {
+  const FootballPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,5 +20,6 @@ class RunningPage extends StatelessWidget {
           ])),
       child: const RunningCard(),
     );
+    ;
   }
 }
