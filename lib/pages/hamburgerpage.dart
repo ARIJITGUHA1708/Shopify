@@ -22,7 +22,7 @@ class Hamburgerpage extends StatelessWidget {
                   Color.fromARGB(255, 209, 229, 245)
                 ])),
                 child: Text(
-                  "Shopify",
+                  "Shopsify",
                   style: TextStyle(
                       fontWeight: FontWeight.w800, color: Colors.white),
                 )),

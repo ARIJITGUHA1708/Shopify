@@ -1,6 +1,7 @@
 import 'package:demo_app/containers/best_gadget_container.dart';
 import 'package:demo_app/containers/janmastami.dart';
 import 'package:demo_app/containers/orderabove.dart';
+import 'package:demo_app/containers/shopbybrandscontainer.dart';
 import 'package:demo_app/containers/shopbysports.dart';
 import 'package:demo_app/pages/hamburgerpage.dart';
 import 'package:demo_app/pages/login.dart';
@@ -50,7 +51,7 @@ class _DashBoardScreen extends State<MyCustomForm> {
             child: AppBar(
                 //toolbarHeight: 40,
                 title: const Text(
-                  "Shopify",
+                  "Shopsify",
                   style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                 ),
                 actions: [
@@ -275,6 +276,9 @@ class _DashBoardScreen extends State<MyCustomForm> {
               ),
               const Row(
                 children: [ShopBySportsContainer()],
+              ),
+              const Row(
+                children: [ShopByBrandContainer()],
               )
             ],
           ),

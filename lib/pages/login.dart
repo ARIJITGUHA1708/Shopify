@@ -15,6 +15,7 @@ class _LoginState extends State<Login> {
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
         body: SingleChildScrollView(
+      physics: const NeverScrollableScrollPhysics(),
       child: Container(
         decoration: const BoxDecoration(color: Colors.blue),
         width: screenWidth,
@@ -41,25 +42,24 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.only(right: 10),
-                    height: 50,
-                    width: 180,
-                    child: Image.asset('assets/images/flipkart-logo5.png'),
-                  )
+                      margin: const EdgeInsets.only(right: 20),
+                      child: const Text(
+                        "Shopsify",
+                        style: TextStyle(fontSize: 20),
+                      ))
                 ],
               ),
             ),
             Container(
                 margin: const EdgeInsets.only(top: 20),
                 width: screenWidth,
-                height: screenWidth * 1.9,
+                height: screenWidth * 1.95,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20)),
                 child: Padding(
                   padding: const EdgeInsets.only(top: 10),
-                  child: Container(
-                      child: Column(
+                  child: Column(
                     children: [
                       const SizedBox(
                         child: Text(
@@ -89,7 +89,7 @@ class _LoginState extends State<Login> {
                         ),
                       )
                     ],
-                  )),
+                  ),
                 ))
           ],
         ),
