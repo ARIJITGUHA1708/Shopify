@@ -20,6 +20,5 @@ class TennisPage extends StatelessWidget {
           ])),
       child: const RunningCard(),
     );
-    ;
   }
 }

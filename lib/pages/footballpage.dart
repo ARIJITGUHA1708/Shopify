@@ -20,6 +20,5 @@ class FootballPage extends StatelessWidget {
           ])),
       child: const RunningCard(),
     );
-    ;
   }
 }

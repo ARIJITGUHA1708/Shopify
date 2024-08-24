@@ -20,6 +20,5 @@ class YogaPage extends StatelessWidget {
           ])),
       child: const RunningCard(),
     );
-    ;
   }
 }

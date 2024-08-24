@@ -20,6 +20,5 @@ class BasketballPage extends StatelessWidget {
           ])),
       child: const RunningCard(),
     );
-    ;
   }
 }
