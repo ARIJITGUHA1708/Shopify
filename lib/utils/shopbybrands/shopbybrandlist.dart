@@ -19,7 +19,7 @@ class ShopByBrandList extends StatelessWidget {
     List<Brands> listofbrands = [b1, b2, b3, b4];
 
     return SizedBox(
-      height: 260,
+      height: 250,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           padding: const EdgeInsets.only(left: 10, right: 10),

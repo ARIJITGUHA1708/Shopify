@@ -52,7 +52,10 @@ class _DashBoardScreen extends State<MyCustomForm> {
                 //toolbarHeight: 40,
                 title: const Text(
                   "Shopsify",
-                  style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      fontSize: 23,
+                      fontWeight: FontWeight.bold),
                 ),
                 actions: [
                   IconButton(
@@ -62,10 +65,10 @@ class _DashBoardScreen extends State<MyCustomForm> {
                             MaterialPageRoute(
                                 builder: (context) => const Login()));
                       },
-                      icon: const Icon(Icons.login_rounded)),
+                      icon: const Icon(Icons.login_sharp)),
                   IconButton(
                       onPressed: () {},
-                      icon: const Icon(Icons.shopping_cart_outlined)),
+                      icon: const Icon(Icons.shopping_cart_checkout)),
                 ],
                 backgroundColor: Colors.transparent
                 //backgroundColor: const Color.fromARGB(255, 69, 106, 253),

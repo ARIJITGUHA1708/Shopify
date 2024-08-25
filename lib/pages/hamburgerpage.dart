@@ -42,7 +42,7 @@ class Hamburgerpage extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.person),
-            title: Text("Shopify Plus Zone"),
+            title: Text("Shopsify Plus Zone"),
           ),
           ListTile(
             leading: Icon(Icons.person),
@@ -50,7 +50,7 @@ class Hamburgerpage extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.person),
-            title: Text("More on Shopify"),
+            title: Text("More on Shopsify"),
           ),
           ListTile(
             leading: Icon(Icons.language),
@@ -67,7 +67,7 @@ class Hamburgerpage extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.sell),
-            title: Text("Sell on Shopify"),
+            title: Text("Sell on Shopsify"),
           ),
           ListTile(
             leading: Icon(Icons.person),

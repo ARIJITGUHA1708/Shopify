@@ -17,7 +17,7 @@ class ShopBySportsContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.only(bottom: 20),
+        margin: const EdgeInsets.only(bottom: 10),
         padding: const EdgeInsets.only(right: 20),
         decoration: const BoxDecoration(
             //borderRadius: BorderRadius.circular(20),

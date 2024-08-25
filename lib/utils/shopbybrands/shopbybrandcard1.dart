@@ -9,10 +9,8 @@ class ShopByBrandCard1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
       margin: const EdgeInsets.only(right: 5, left: 5, top: 10),
-      height: 70,
-      width: 200,
+      width: 220,
       child: Image.asset(
         brandImage,
         fit: BoxFit.fill,

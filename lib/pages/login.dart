@@ -12,8 +12,8 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   final username = TextEditingController();
   final password = TextEditingController();
-  String? usernameString;
-  String? passwordString;
+  var usernameString;
+  var passwordString;
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -74,7 +74,7 @@ class _LoginState extends State<Login> {
                       ),
                       const SizedBox(
                           child: Text(
-                        "Enter Your Phone Number To Continue",
+                        "Enter Email and Password To Continue",
                         style: TextStyle(fontWeight: FontWeight.w100),
                       )),
                       Container(
@@ -83,7 +83,7 @@ class _LoginState extends State<Login> {
                         child: TextField(
                           controller: username,
                           decoration: InputDecoration(
-                              prefixIcon: const Icon(Icons.search_outlined),
+                              prefixIcon: const Icon(Icons.email_outlined),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(7),
                               ),
@@ -100,7 +100,7 @@ class _LoginState extends State<Login> {
                         child: TextField(
                           controller: password,
                           decoration: InputDecoration(
-                              prefixIcon: const Icon(Icons.search_outlined),
+                              prefixIcon: const Icon(Icons.password_outlined),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(7),
                               ),
@@ -119,13 +119,13 @@ class _LoginState extends State<Login> {
                                 passwordString = password.text;
                               });
                               try {
-                                var response = await http.post(
-                                    Uri.parse(
-                                        'https://dummyjson.com/auth/login'),
-                                    body: {
-                                      "username": "$usernameString",
-                                      "password": "$passwordString"
-                                    });
+                                var response = await http.post(Uri.parse(
+                                    //IT IS A DUMMY API FROM DUMMYJSON WEBSITE
+                                    //THE USERNAME SHOULD BE "EMILYS" AND PASSWORD SHOULD BE "EMILYSPASS"
+                                    'https://dummyjson.com/auth/login'), body: {
+                                  "username": "$usernameString",
+                                  "password": "$passwordString"
+                                });
                                 print(response.body);
                               } catch (error) {
                                 print(error);
