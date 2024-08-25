@@ -122,7 +122,7 @@ class _LoginState extends State<Login> {
                               try {
                                 var response = await http.post(Uri.parse(
                                     //IT IS A DUMMY API FROM DUMMYJSON WEBSITE
-                                    //THE USERNAME SHOULD BE "EMILYS" AND PASSWORD SHOULD BE "EMILYSPASS"
+                                    //THE USERNAME SHOULD BE "emilys" AND PASSWORD SHOULD BE "emilyspass"
                                     'https://dummyjson.com/auth/login'), body: {
                                   "username": "$usernameString",
                                   "password": "$passwordString"
