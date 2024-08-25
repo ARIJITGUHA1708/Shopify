@@ -67,10 +67,7 @@ class _DashBoardScreen extends State<MyCustomForm> {
                     value.loginStatus
                         ? IconButton(
                             onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const Login()));
+                              value.changeStatus();
                             },
                             icon: const Icon(Icons.logout_rounded))
                         : IconButton(

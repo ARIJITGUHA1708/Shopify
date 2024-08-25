@@ -1,6 +1,8 @@
 import 'package:demo_app/main.dart';
+import 'package:demo_app/providers/login_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:provider/provider.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -113,41 +115,44 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                       Container(
-                        child: ElevatedButton(
-                            onPressed: () async {
-                              setState(() {
-                                usernameString = username.text;
-                                passwordString = password.text;
-                              });
-                              try {
-                                var response = await http.post(Uri.parse(
-                                    //IT IS A DUMMY API FROM DUMMYJSON WEBSITE
-                                    //THE USERNAME SHOULD BE "emilys" AND PASSWORD SHOULD BE "emilyspass"
-                                    'https://dummyjson.com/auth/login'), body: {
-                                  "username": "$usernameString",
-                                  "password": "$passwordString"
+                        child: Consumer<LoginProvider>(
+                          builder: (context, value, child) => ElevatedButton(
+                              onPressed: () async {
+                                setState(() {
+                                  usernameString = username.text;
+                                  passwordString = password.text;
                                 });
-                                print(response.body);
-                                if (response.body
-                                    .contains("Invalid credentials")) {
-                                  setState(() {
-                                    invalidMessage =
-                                        "invalid username and password";
+                                try {
+                                  var response = await http.post(Uri.parse(
+                                      //IT IS A DUMMY API FROM DUMMYJSON WEBSITE
+                                      //THE USERNAME SHOULD BE "emilys" AND PASSWORD SHOULD BE "emilyspass"
+                                      'https://dummyjson.com/auth/login'), body: {
+                                    "username": "$usernameString",
+                                    "password": "$passwordString"
                                   });
-                                  print(
-                                      "galat banda hai yeh,andar ghusne mt de");
-                                } else {
-                                  Navigator.pushReplacement(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              MyCustomForm()));
+                                  print(response.body);
+                                  if (response.body
+                                      .contains("Invalid credentials")) {
+                                    setState(() {
+                                      invalidMessage =
+                                          "invalid username and password";
+                                    });
+                                    print(
+                                        "galat banda hai yeh,andar ghusne mt de");
+                                  } else {
+                                    value.changeStatus();
+                                    Navigator.pushReplacement(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                MyCustomForm()));
+                                  }
+                                } catch (error) {
+                                  print(error);
                                 }
-                              } catch (error) {
-                                print(error);
-                              }
-                            },
-                            child: const Text("Submit")),
+                              },
+                              child: const Text("Submit")),
+                        ),
                       ),
                       Text("Username:$usernameString"),
                       Text("Password:$passwordString"),
