@@ -30,9 +30,9 @@ class _SplaceScreenState extends State<SplaceScreen> {
           Color.fromARGB(255, 235, 242, 248)
         ])),
         child: const Center(
-          child: Text('Flipkart',
+          child: Text('Shopsify',
               style: TextStyle(
-                  fontSize: 34,
+                  fontSize: 36,
                   fontWeight: FontWeight.w700,
                   color: Colors.white)),
         ),

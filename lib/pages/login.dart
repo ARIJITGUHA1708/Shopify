@@ -14,6 +14,7 @@ class _LoginState extends State<Login> {
   final password = TextEditingController();
   var usernameString;
   var passwordString;
+  var invalidMessage;
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -127,6 +128,21 @@ class _LoginState extends State<Login> {
                                   "password": "$passwordString"
                                 });
                                 print(response.body);
+                                if (response.body
+                                    .contains("Invalid credentials")) {
+                                  setState(() {
+                                    invalidMessage =
+                                        "invalid username and password";
+                                  });
+                                  print(
+                                      "galat banda hai yeh,andar ghusne mt de");
+                                } else {
+                                  Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              MyCustomForm()));
+                                }
                               } catch (error) {
                                 print(error);
                               }
@@ -134,7 +150,8 @@ class _LoginState extends State<Login> {
                             child: const Text("Submit")),
                       ),
                       Text("Username:$usernameString"),
-                      Text("Password:$passwordString")
+                      Text("Password:$passwordString"),
+                      Text("$invalidMessage"),
                     ],
                   ),
                 ))
