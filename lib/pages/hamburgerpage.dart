@@ -1,3 +1,4 @@
+import 'package:demo_app/containers/camera_container.dart';
 import 'package:demo_app/providers/login_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -32,11 +33,23 @@ class Hamburgerpage extends StatelessWidget {
                         )),
                   ),
                   SizedBox(
-                    child: ListTile(
-                      //leading: Icon(Icons.person),
-                      leading: Image.network(value.image,
-                          height: 50, width: 50, fit: BoxFit.cover),
-                      title: const Text("My Profile"),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CameraContainer()));
+                      },
+                      child: ListTile(
+                        //leading: Icon(Icons.person),
+                        // leading: Image.file(
+                        //   value.cameraImage,
+                        //   fit: BoxFit.cover,
+                        // ),
+                        leading: Image.network(value.image,
+                            height: 50, width: 50, fit: BoxFit.cover),
+                        title: const Text("My Profile"),
+                      ),
                     ),
                   ),
                   const Divider(
