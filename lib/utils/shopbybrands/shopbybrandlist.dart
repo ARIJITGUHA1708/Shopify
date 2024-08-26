@@ -2,8 +2,8 @@ import 'package:demo_app/utils/shopbybrands/shopbybrandcard1.dart';
 import 'package:flutter/material.dart';
 
 class Brands {
-  var brandImage;
-  var brandName;
+  String brandImage;
+  String brandName;
   Brands(this.brandImage, this.brandName);
 }
 

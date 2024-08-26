@@ -16,9 +16,9 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   final username = TextEditingController();
   final password = TextEditingController();
-  var usernameString;
-  var passwordString;
-  var invalidMessage;
+  String? usernameString;
+  String? passwordString;
+  String? invalidMessage;
   @override
   void initState() {
     super.initState();

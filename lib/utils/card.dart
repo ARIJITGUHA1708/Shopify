@@ -78,7 +78,7 @@ class _ImageCardState extends State<ImageCard> {
                   height: 85,
                   width: 90,
                   child: Image.asset(
-                    'assets/images/makeup2.png',
+                    'assets/images/makeup.png',
                     fit: BoxFit.cover,
                   ),
                 ),

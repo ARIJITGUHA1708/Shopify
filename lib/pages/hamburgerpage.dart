@@ -34,7 +34,8 @@ class Hamburgerpage extends StatelessWidget {
                   SizedBox(
                     child: ListTile(
                       //leading: Icon(Icons.person),
-                      leading: Image.network(value.image),
+                      leading: Image.network(value.image,
+                          height: 50, width: 50, fit: BoxFit.cover),
                       title: const Text("My Profile"),
                     ),
                   ),
