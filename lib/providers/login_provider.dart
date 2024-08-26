@@ -10,7 +10,6 @@ class LoginProvider extends ChangeNotifier {
 
   void changeImage(var image) {
     this.image = image;
-    print("$image");
     notifyListeners();
   }
 }
