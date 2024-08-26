@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ShopByBrandCard1 extends StatelessWidget {
-  //const ShopByBrandCard1({super.key});
+  //ShopByBrandCard1({super.key});
   var brandImage;
   var brandName;
   ShopByBrandCard1(this.brandImage, this.brandName);

@@ -16,8 +16,8 @@ class Hamburgerpage extends StatelessWidget {
         builder: (context, value, child) => value.loginStatus
             ? ListView(
                 padding: const EdgeInsets.only(top: 0),
-                children: const [
-                  SizedBox(
+                children: [
+                  const SizedBox(
                     height: 100,
                     child: DrawerHeader(
                         decoration: BoxDecoration(
@@ -31,78 +31,81 @@ class Hamburgerpage extends StatelessWidget {
                               fontWeight: FontWeight.w800, color: Colors.white),
                         )),
                   ),
-                  ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("My Profile"),
+                  SizedBox(
+                    child: ListTile(
+                      //leading: Icon(Icons.person),
+                      leading: Image.network(value.image),
+                      title: const Text("My Profile"),
+                    ),
                   ),
-                  Divider(
+                  const Divider(
                     height: 1,
                     thickness: 2,
                     color: Colors.black12,
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.person),
                     title: Text("SuperCoin Zone"),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.person),
                     title: Text("Shopsify Plus Zone"),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.person),
                     title: Text("All Categories"),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.person),
                     title: Text("More on Shopsify"),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.language),
                     title: Text("Choose Language"),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.person),
                     title: Text("Offer Zone"),
                   ),
-                  Divider(
+                  const Divider(
                     height: 1,
                     thickness: 2,
                     color: Colors.black12,
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.sell),
                     title: Text("Sell on Shopsify"),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.person),
                     title: Text("My Orders"),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.person),
                     title: Text("Coupons"),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.person),
                     title: Text("My Cart"),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.person),
                     title: Text("My Wishlist"),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.notification_add),
                     title: Text("My Notification"),
                   ),
-                  Divider(
+                  const Divider(
                     height: 1,
                     thickness: 2,
                     color: Colors.black12,
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.help_center),
                     title: Text("Help Center"),
                   ),
-                  ListTile(
+                  const ListTile(
                     leading: Icon(Icons.person),
                     title: Text("Legal"),
                   )

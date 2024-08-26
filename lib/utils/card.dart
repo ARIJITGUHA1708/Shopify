@@ -23,13 +23,14 @@ class _ImageCardState extends State<ImageCard> {
             decoration: BoxDecoration(
                 border: Border.all(width: 0.2, color: Colors.black)),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
                   height: 85,
                   width: 90,
                   child: Image.asset(
                     'assets/images/shoe.png',
+                    fit: BoxFit.cover,
                   ),
                 ),
                 const Text("Woodland"),
@@ -43,17 +44,17 @@ class _ImageCardState extends State<ImageCard> {
           Container(
             height: 140,
             width: 120,
-            //margin: const EdgeInsets.only(left: 10, top: 5),
             decoration: BoxDecoration(
                 border: Border.all(width: 0.2, color: Colors.black)),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
                   height: 85,
                   width: 90,
                   child: Image.asset(
                     'assets/images/watch.png',
+                    fit: BoxFit.cover,
                   ),
                 ),
                 const Text("Crew Grow"),
@@ -68,18 +69,17 @@ class _ImageCardState extends State<ImageCard> {
             height: 140,
             width: 120,
             margin: const EdgeInsets.only(right: 10),
-            //margin: const EdgeInsets.only(left: 10, top: 5),
             decoration: BoxDecoration(
                 border: Border.all(width: 0.2, color: Colors.black)),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  padding: const EdgeInsets.only(top: 5),
-                  height: 80,
-                  width: 100,
+                SizedBox(
+                  height: 85,
+                  width: 90,
                   child: Image.asset(
                     'assets/images/makeup2.png',
+                    fit: BoxFit.cover,
                   ),
                 ),
                 const Text("Makeup Brushes"),

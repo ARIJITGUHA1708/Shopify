@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:demo_app/main.dart';
 import 'package:demo_app/providers/login_provider.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +19,14 @@ class _LoginState extends State<Login> {
   var usernameString;
   var passwordString;
   var invalidMessage;
+  @override
+  void initState() {
+    super.initState();
+    usernameString = "";
+    passwordString = "";
+    invalidMessage = "";
+  }
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -130,17 +140,19 @@ class _LoginState extends State<Login> {
                                     "username": "$usernameString",
                                     "password": "$passwordString"
                                   });
-                                  print(response.body);
-                                  if (response.body
-                                      .contains("Invalid credentials")) {
+                                  //print(response.body);
+                                  var image = jsonDecode(response.body);
+                                  //print(image["image"]);
+
+                                  // print(response.statusCode);
+                                  if (response.statusCode == 400) {
                                     setState(() {
                                       invalidMessage =
                                           "invalid username and password";
                                     });
-                                    print(
-                                        "galat banda hai yeh,andar ghusne mt de");
-                                  } else {
+                                  } else if (response.statusCode == 200) {
                                     value.changeStatus();
+                                    value.changeImage(image["image"]);
                                     Navigator.pushReplacement(
                                         context,
                                         MaterialPageRoute(
@@ -154,9 +166,10 @@ class _LoginState extends State<Login> {
                               child: const Text("Submit")),
                         ),
                       ),
-                      Text("Username:$usernameString"),
-                      Text("Password:$passwordString"),
-                      Text("$invalidMessage"),
+                      Text(
+                        "$invalidMessage",
+                        style: const TextStyle(color: Colors.red),
+                      ),
                     ],
                   ),
                 ))
