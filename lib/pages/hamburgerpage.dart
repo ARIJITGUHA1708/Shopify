@@ -44,10 +44,11 @@ class Hamburgerpage extends StatelessWidget {
                         //leading: Icon(Icons.person),
                         // leading: Image.file(
                         //   value.cameraImage,
+                        //height:30,width:30,
                         //   fit: BoxFit.cover,
                         // ),
                         leading: Image.network(value.image,
-                            height: 50, width: 50, fit: BoxFit.cover),
+                            height: 30, width: 30, fit: BoxFit.cover),
                         title: const Text("My Profile"),
                       ),
                     ),

@@ -26,8 +26,15 @@ class _CameraContainerState extends State<CameraContainer> {
   }
 
   Future _pickImageFromCamera() async {
-    final returnedCameraImage =
-        await ImagePicker().pickImage(source: ImageSource.camera);
+    final returnedCameraImage = await ImagePicker().pickImage(
+      source: ImageSource.camera,
+      preferredCameraDevice: CameraDevice
+          .front, // chnage the default behavior of open the front camera
+      //(by default it open rear camera when you click on camera tab)
+      imageQuality:
+          100, //this can be between 0 to 100, 0 means lower quality and size,
+      // and 100 means higher quality and size
+    );
     if (returnedCameraImage == null) {
       return;
     }
@@ -44,6 +51,34 @@ class _CameraContainerState extends State<CameraContainer> {
       child: Consumer<LoginProvider>(
         builder: (context, value, child) => Column(
           children: [
+            Container(
+              child: Image.network(
+                value.image,
+                width: 100,
+                height: 100,
+                fit: BoxFit.cover,
+              ),
+            ),
+            Text(
+              value.userInformation!['firstName'],
+              style: const TextStyle(color: Colors.black, fontSize: 16),
+            ),
+            Text(
+              value.userInformation!['lastName'],
+              style: const TextStyle(color: Colors.black, fontSize: 16),
+            ),
+            Text(
+              value.userInformation!['gender'],
+              style: const TextStyle(color: Colors.black, fontSize: 16),
+            ),
+            Text(
+              value.userInformation!['username'],
+              style: const TextStyle(fontSize: 16, color: Colors.black),
+            ),
+            Text(
+              value.userInformation!['email'],
+              style: const TextStyle(fontSize: 16, color: Colors.black),
+            ),
             MaterialButton(
               onPressed: () {
                 _pickImageFromGallery();
@@ -93,7 +128,7 @@ class _CameraContainerState extends State<CameraContainer> {
               },
               child: const Text(
                 "Change",
-                style: TextStyle(fontSize: 12, color: Colors.white),
+                style: TextStyle(fontSize: 13, color: Colors.white),
               ),
             )
           ],

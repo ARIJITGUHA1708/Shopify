@@ -140,11 +140,7 @@ class _LoginState extends State<Login> {
                                     "username": "$usernameString",
                                     "password": "$passwordString"
                                   });
-                                  //print(response.body);
-                                  var image = jsonDecode(response.body);
-                                  //print(image["image"]);
-
-                                  // print(response.statusCode);
+                                  var responseJson = jsonDecode(response.body);
                                   if (response.statusCode == 400) {
                                     setState(() {
                                       invalidMessage =
@@ -152,7 +148,8 @@ class _LoginState extends State<Login> {
                                     });
                                   } else if (response.statusCode == 200) {
                                     value.changeStatus();
-                                    value.changeImage(image["image"]);
+                                    value.changeImage(responseJson["image"]);
+                                    value.allDataOfUser(responseJson);
                                     Navigator.pushReplacement(
                                         context,
                                         MaterialPageRoute(
